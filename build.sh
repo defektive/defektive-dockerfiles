@@ -1,5 +1,5 @@
 #! /bin/bash
-
+set -e
 dir=production-ready
 for image in `cat $dir/base-images.txt`; do
   base_image=`echo $image | cut -d ":" -f 1`
@@ -33,5 +33,6 @@ done
 for image in `ls $dir/dist/`; do
   cd "$dir/dist/$image"
   docker build -t defektive/$image .
+  # docker push defektive/$image
   cd -
 done
