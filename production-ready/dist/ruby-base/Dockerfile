@@ -6,7 +6,7 @@ RUN adduser -u 9999 -g docker -D -g "Docker User" docker && \
     apk add curl ca-certificates && \
     update-ca-certificates && \
     rm -rf /var/cache/apk/* && \
-    mkdir -p /usr/src && \
-    chown -R docker:docker /usr/src
-WORKDIR /usr/src
+    mkdir -p /usr/local/app && \
+    chown -R docker:docker /usr/local/
+WORKDIR /usr/local/app
 USER docker

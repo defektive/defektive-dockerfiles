@@ -7,6 +7,7 @@ RUN apk add --no-cache --virtual .build-deps \
        gcc \
        gnupg \
        libgcc \
+       tzdata \
        linux-headers \
        make \
        python \
@@ -16,3 +17,4 @@ USER docker
 RUN gem install rails \
     && rails new --api -d postgresql ./tmpapp \
     && rm -rf tmpapp
+EXPOSE 3000
