@@ -1,6 +1,6 @@
 # This file was automatically generated
 # changes here will be overwritten
-FROM node:6-alpine
+FROM node:alpine
 RUN adduser -u 9999 -g docker -D -g "Docker User" docker && \
     apk --update upgrade && \
     apk add curl ca-certificates && \
