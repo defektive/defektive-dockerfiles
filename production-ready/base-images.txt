@@ -1,2 +1,4 @@
-ruby:2.3-alpine
 node:alpine
+node:8-alpine
+node:6-alpine
+ruby:2.3-alpine

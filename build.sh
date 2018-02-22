@@ -2,7 +2,7 @@
 set -e
 dir=production-ready
 for image in `cat $dir/base-images.txt`; do
-  base_image=`echo $image | cut -d ":" -f 1`
+  base_image=`echo $image`
   for template in `ls $dir/templates/`; do
     template_base=`echo $template | cut -d "-" -f 1`
     template_name=`echo $template | cut -d "-" -f 2`
